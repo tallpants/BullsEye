@@ -46,6 +46,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2w-De-poh">
                                 <rect key="frame" x="526" y="274" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="ZLt-uH-4C4" kind="presentation" modalTransitionStyle="flipHorizontal" id="e7O-4h-hVl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfJ-gJ-KZ3">
                                 <rect key="frame" x="142" y="275" width="50" height="21"/>
@@ -131,6 +134,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.295774647887324" y="9.375"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="bYi-ga-2Ib">
+            <objects>
+                <viewController id="ZLt-uH-4C4" customClass="AboutViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ppK-Be-FQn">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ktk-SQ-MMP">
+                                <rect key="frame" x="20" y="20" width="528" height="242"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-Q9-QHm">
+                                <rect key="frame" x="265" y="270" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close" destination="ZLt-uH-4C4" eventType="touchUpInside" id="XEW-nD-lEf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Sg-4G-g9v" firstAttribute="bottom" secondItem="Q2i-Q9-QHm" secondAttribute="bottom" constant="20" id="01g-en-AKk"/>
+                            <constraint firstItem="Q2i-Q9-QHm" firstAttribute="top" secondItem="Ktk-SQ-MMP" secondAttribute="bottom" constant="8" id="Ywn-xs-uLV"/>
+                            <constraint firstItem="2Sg-4G-g9v" firstAttribute="trailing" secondItem="Ktk-SQ-MMP" secondAttribute="trailing" constant="20" id="eg2-s2-0fe"/>
+                            <constraint firstItem="Q2i-Q9-QHm" firstAttribute="centerX" secondItem="ppK-Be-FQn" secondAttribute="centerX" id="j68-xu-v1M"/>
+                            <constraint firstItem="Ktk-SQ-MMP" firstAttribute="leading" secondItem="2Sg-4G-g9v" secondAttribute="leading" constant="20" id="lPT-g1-gd0"/>
+                            <constraint firstItem="Ktk-SQ-MMP" firstAttribute="top" secondItem="2Sg-4G-g9v" secondAttribute="top" constant="20" id="pq8-S0-GF2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Sg-4G-g9v"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t87-QH-Jai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684.50704225352115" y="7.5"/>
         </scene>
     </scenes>
 </document>
